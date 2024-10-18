@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8wftiauni8tu"]
+
+[ext_resource type="Script" path="res://Addings/Cars/g.gd" id="1_kny0d"]
+
+[node name="loader" type="ResourcePreloader"]
+script = ExtResource("1_kny0d")

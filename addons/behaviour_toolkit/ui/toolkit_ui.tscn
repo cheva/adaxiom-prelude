@@ -1,0 +1,506 @@
+[gd_scene load_steps=41 format=3 uid="uid://o16emp4t4wb1"]
+
+[ext_resource type="Script" path="res://addons/behaviour_toolkit/ui/toolkit_ui.gd" id="1_51rvx"]
+[ext_resource type="Script" path="res://addons/behaviour_toolkit/ui/utils/update_manager.gd" id="2_ohrre"]
+
+[sub_resource type="Resource" id="Resource_u8ovg"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/Search.svg"
+
+[sub_resource type="Resource" id="Resource_6a3b4"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/Blackboard.svg"
+
+[sub_resource type="Resource" id="Resource_5eb42"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/Add.svg"
+
+[sub_resource type="Resource" id="Resource_ruaoi"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/FSMState.svg"
+
+[sub_resource type="Resource" id="Resource_d5h3y"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/FSMStateIntegration.svg"
+
+[sub_resource type="Resource" id="Resource_k0gev"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/FSMStateIntegrationReturn.svg"
+
+[sub_resource type="Resource" id="Resource_aw2m4"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/FSMTransition.svg"
+
+[sub_resource type="Resource" id="Resource_fsllw"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/Add.svg"
+
+[sub_resource type="Resource" id="Resource_15yu1"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTLeaf.svg"
+
+[sub_resource type="Resource" id="Resource_wjchk"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTLeafPrint.svg"
+
+[sub_resource type="Resource" id="Resource_4shkv"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTLeafWait.svg"
+
+[sub_resource type="Resource" id="Resource_06du7"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTLeafCondition.svg"
+
+[sub_resource type="Resource" id="Resource_ldxfb"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTLeafCall.svg"
+
+[sub_resource type="Resource" id="Resource_7gq02"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTLeafSignal.svg"
+
+[sub_resource type="Resource" id="Resource_ypb58"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTLeafTween.svg"
+
+[sub_resource type="Resource" id="Resource_w428c"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTLeafIntegration.svg"
+
+[sub_resource type="Resource" id="Resource_wgdgf"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTComposite.svg"
+
+[sub_resource type="Resource" id="Resource_dsys5"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTCompositeSequence.svg"
+
+[sub_resource type="Resource" id="Resource_vufqg"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTCompositeSelector.svg"
+
+[sub_resource type="Resource" id="Resource_8bxdo"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTSimpleParallel.svg"
+
+[sub_resource type="Resource" id="Resource_tmtyt"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTCompositeRandom.svg"
+
+[sub_resource type="Resource" id="Resource_e31uu"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTCompositeRandomSequence.svg"
+
+[sub_resource type="Resource" id="Resource_j0af5"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTCompositeRandomSelector.svg"
+
+[sub_resource type="Resource" id="Resource_6hrbb"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTCompositeIntegration.svg"
+
+[sub_resource type="Resource" id="Resource_xiloi"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTDecorator.svg"
+
+[sub_resource type="Resource" id="Resource_ttm1e"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTDecoratorFail.svg"
+
+[sub_resource type="Resource" id="Resource_yj56o"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTDecoratorSucceed.svg"
+
+[sub_resource type="Resource" id="Resource_m5yd4"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTDecoratorLimiter.svg"
+
+[sub_resource type="Resource" id="Resource_rjif1"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTDecoratorNot.svg"
+
+[sub_resource type="Resource" id="Resource_3l2ag"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/BTDecoratorRepeat.svg"
+
+[sub_resource type="InputEventKey" id="InputEventKey_iocl3"]
+device = -1
+ctrl_pressed = true
+keycode = 72
+
+[sub_resource type="Shortcut" id="Shortcut_67x2o"]
+events = [SubResource("InputEventKey_iocl3")]
+
+[sub_resource type="Resource" id="Resource_5qdmd"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/Help.svg"
+
+[sub_resource type="Resource" id="Resource_35140"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/EditorFiniteStateMachine.svg"
+
+[sub_resource type="Resource" id="Resource_mr1mb"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/EditorBTRoot.svg"
+
+[sub_resource type="InputEventKey" id="InputEventKey_dernr"]
+device = -1
+ctrl_pressed = true
+keycode = 70
+
+[sub_resource type="Shortcut" id="Shortcut_xqhq3"]
+events = [SubResource("InputEventKey_dernr")]
+
+[sub_resource type="Resource" id="Resource_86wlp"]
+metadata/__load_path__ = "res://addons/behaviour_toolkit/icons/Search.svg"
+
+[node name="ToolkitUi" type="Control" node_paths=PackedStringArray("update_manager")]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 3
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 280.0
+offset_bottom = 320.0
+grow_vertical = 2
+script = ExtResource("1_51rvx")
+update_manager = NodePath("UpdateManager")
+metadata/_edit_vertical_guides_ = []
+
+[node name="UpdateManager" type="HTTPRequest" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_ohrre")
+addon_config_path = "res://addons/behaviour_toolkit/plugin.cfg"
+repo_config_url = "https://raw.githubusercontent.com/ThePat02/BehaviourToolkit/main/addons/behaviour_toolkit/plugin.cfg"
+
+[node name="FileDialogNewBlackboard" type="FileDialog" parent="."]
+title = "Create a new Blackboard"
+size = Vector2i(800, 500)
+ok_button_text = "Create Blackboard"
+filters = PackedStringArray("*.tres ; Resources")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="SearchBar" type="LineEdit" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+placeholder_text = "Search..."
+right_icon = SubResource("Resource_u8ovg")
+
+[node name="Panel" type="Panel" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Toolbox" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Misc" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox"]
+layout_mode = 2
+
+[node name="Heading" type="RichTextLabel" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/Misc"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[center][img]res://addons/behaviour_toolkit/icons/Gear.svg[/img] Toolbox[/center]"
+fit_content = true
+scroll_active = false
+
+[node name="ButtonBlackboard" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/Misc"]
+layout_mode = 2
+text = "New Blackboard"
+icon = SubResource("Resource_6a3b4")
+
+[node name="FiniteStateMachine" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Heading" type="RichTextLabel" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/FiniteStateMachine"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][img]res://addons/behaviour_toolkit/icons/FiniteStateMachine.svg[/img] FiniteStateMachine[/center]"
+fit_content = true
+scroll_active = false
+
+[node name="ButtonAddFSM" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/FiniteStateMachine/Heading"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_right = 28.0
+offset_bottom = 26.0
+icon = SubResource("Resource_5eb42")
+flat = true
+
+[node name="ButtonState" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/FiniteStateMachine"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "New State"
+icon = SubResource("Resource_ruaoi")
+
+[node name="States" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/FiniteStateMachine"]
+layout_mode = 2
+
+[node name="ButtonStateIntegratedBT" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/FiniteStateMachine/States"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "IntegratedBT"
+icon = SubResource("Resource_d5h3y")
+
+[node name="ButtonStateIntegrationReturn" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/FiniteStateMachine/States"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Return"
+icon = SubResource("Resource_k0gev")
+
+[node name="ButtonTransition" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/FiniteStateMachine"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "New Transition"
+icon = SubResource("Resource_aw2m4")
+
+[node name="BehaviourTree" type="VBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Heading" type="RichTextLabel" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[center][img]res://addons/behaviour_toolkit/icons/BTRoot.svg[/img] Behaviour Tree[/center]"
+fit_content = true
+scroll_active = false
+
+[node name="ButtonAddBT" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Heading"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 12.0
+offset_bottom = 10.0
+icon = SubResource("Resource_fsllw")
+flat = true
+
+[node name="ButtonLeaf" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "New Leaf"
+icon = SubResource("Resource_15yu1")
+
+[node name="Leaves" type="HFlowContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree"]
+layout_mode = 2
+
+[node name="ButtonPrint" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Leaves"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Print"
+icon = SubResource("Resource_wjchk")
+
+[node name="ButtonWait" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Leaves"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Wait"
+icon = SubResource("Resource_4shkv")
+
+[node name="ButtonCondition" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Leaves"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Condition"
+icon = SubResource("Resource_06du7")
+
+[node name="ButtonCall" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Leaves"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Call"
+icon = SubResource("Resource_ldxfb")
+
+[node name="ButtonSignal" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Leaves"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Signal"
+icon = SubResource("Resource_7gq02")
+
+[node name="ButtonTween" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Leaves"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Tween"
+icon = SubResource("Resource_ypb58")
+
+[node name="ButtonFSMEvent" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Leaves"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "FSMEvent
+"
+icon = SubResource("Resource_w428c")
+
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree"]
+layout_mode = 2
+
+[node name="ButtonComposite" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "New Composite"
+icon = SubResource("Resource_wgdgf")
+
+[node name="Composites" type="HFlowContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree"]
+layout_mode = 2
+
+[node name="ButtonSequence" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Composites"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Sequence"
+icon = SubResource("Resource_dsys5")
+
+[node name="ButtonSelector" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Composites"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Selector"
+icon = SubResource("Resource_vufqg")
+
+[node name="ButtonSimpleParallel" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Composites"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "SimpleParallel"
+icon = SubResource("Resource_8bxdo")
+
+[node name="ButtonRandom" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Composites"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Random"
+icon = SubResource("Resource_tmtyt")
+
+[node name="ButtonRandomSequence" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Composites"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "RandomSequence"
+icon = SubResource("Resource_e31uu")
+
+[node name="ButtonRandomSelector" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Composites"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "RandomSelector"
+icon = SubResource("Resource_j0af5")
+
+[node name="ButtonIntegratedFSM" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Composites"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "IntegratedFSM"
+icon = SubResource("Resource_6hrbb")
+
+[node name="HSeparator2" type="HSeparator" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree"]
+layout_mode = 2
+
+[node name="ButtonDecorator" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "New Decorator"
+icon = SubResource("Resource_xiloi")
+
+[node name="Decorators" type="HFlowContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree"]
+layout_mode = 2
+
+[node name="ButtonAlwaysFail" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Decorators"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "AlwaysFail"
+icon = SubResource("Resource_ttm1e")
+
+[node name="ButtonAlwaysSucceed" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Decorators"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "AlwaysSucceed"
+icon = SubResource("Resource_yj56o")
+
+[node name="ButtonLimiter" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Decorators"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Limiter
+"
+icon = SubResource("Resource_m5yd4")
+
+[node name="ButtonInverter" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Decorators"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Inverter"
+icon = SubResource("Resource_rjif1")
+
+[node name="ButtonRepeat" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree/Decorators"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Repeat"
+icon = SubResource("Resource_3l2ag")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/BehaviourTree"]
+layout_mode = 2
+
+[node name="LinkGithub" type="LinkButton" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0823529, 0.756863, 0.32549, 1)
+text = "New Version available on GitHub!"
+uri = "https://github.com/ThePat02/BehaviourToolkit"
+
+[node name="LabelShortcuts" type="RichTextLabel" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "SHIFT: Add as sibling
+CTRL: Add as parent
+CTRL + ALT: Replace"
+fit_content = true
+
+[node name="Footer" type="HBoxContainer" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Version" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/Footer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "BehaviourToolkit vX.X.X"
+
+[node name="ToggleShortcuts" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Footer"]
+layout_mode = 2
+size_flags_horizontal = 10
+tooltip_text = "Toggle Shortcut Help"
+toggle_mode = true
+button_pressed = true
+shortcut = SubResource("Shortcut_67x2o")
+icon = SubResource("Resource_5qdmd")
+flat = true
+icon_alignment = 1
+
+[node name="ToggleFSM" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Footer"]
+layout_mode = 2
+size_flags_horizontal = 8
+tooltip_text = "Toggle FiniteStateMachine elements"
+toggle_mode = true
+button_pressed = true
+icon = SubResource("Resource_35140")
+flat = true
+icon_alignment = 1
+
+[node name="ToggleBT" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Footer"]
+layout_mode = 2
+size_flags_horizontal = 8
+tooltip_text = "Toggle BehaviourTree elements"
+toggle_mode = true
+button_pressed = true
+icon = SubResource("Resource_mr1mb")
+flat = true
+icon_alignment = 1
+
+[node name="ToggleSearchBar" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer/Footer"]
+layout_mode = 2
+size_flags_horizontal = 8
+tooltip_text = "Toggle search bar"
+toggle_mode = true
+shortcut = SubResource("Shortcut_xqhq3")
+icon = SubResource("Resource_86wlp")
+flat = true
+icon_alignment = 1
+
+[connection signal="update_available" from="UpdateManager" to="." method="_on_update_manager_update_available"]
+[connection signal="update_request_completed" from="UpdateManager" to="." method="_on_update_manager_update_request_completed"]
+[connection signal="file_selected" from="FileDialogNewBlackboard" to="." method="_on_file_dialog_new_blackboard_file_selected"]
+[connection signal="text_changed" from="ScrollContainer/MarginContainer/VBoxContainer/SearchBar" to="." method="_on_search_bar_text_changed"]
+[connection signal="pressed" from="ScrollContainer/MarginContainer/VBoxContainer/Panel/ScrollContainer/Toolbox/Misc/ButtonBlackboard" to="." method="_on_button_blackboard_pressed"]
+[connection signal="toggled" from="ScrollContainer/MarginContainer/VBoxContainer/Footer/ToggleShortcuts" to="." method="_on_toggle_shortcuts_toggled"]
+[connection signal="toggled" from="ScrollContainer/MarginContainer/VBoxContainer/Footer/ToggleFSM" to="." method="_on_toggle_fsm_toggled"]
+[connection signal="toggled" from="ScrollContainer/MarginContainer/VBoxContainer/Footer/ToggleBT" to="." method="_on_toggle_bt_toggled"]
+[connection signal="toggled" from="ScrollContainer/MarginContainer/VBoxContainer/Footer/ToggleSearchBar" to="." method="_on_toggle_search_bar_toggled"]

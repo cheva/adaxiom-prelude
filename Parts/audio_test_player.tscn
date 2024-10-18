@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bofilxqacqw1e"]
+
+[ext_resource type="AudioStream" uid="uid://cc6awtqxfpht3" path="res://art/Sounds/loops/gear_air_2.wav" id="1_g0riq"]
+[ext_resource type="Script" path="res://Parts/audio_test_player.gd" id="2_stbcb"]
+
+[node name="RandomPitchPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_g0riq")
+script = ExtResource("2_stbcb")
